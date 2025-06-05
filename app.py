@@ -10,11 +10,9 @@ app = Flask(__name__, static_folder="static")
 app.config['UPLOAD_FOLDER'] = 'uploads'
 app.secret_key = 'your_secret_key'  # For flash messaging
 
-
 # Initialize the video capture from the camera
 camera = cv2.VideoCapture(0)  # 0 is typically the default camera
 camera_lock = threading.Lock() 
-
 
 # Load model and define image size from inception module
 model = inception.inception_model
@@ -69,7 +67,6 @@ def gen_frames():
                 frame = buffer.tobytes()
                 yield (b'--frame\r\n'
                        b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
-
 
 ALLOWED_EXTENSIONS = ['mp4']
 

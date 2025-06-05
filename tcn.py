@@ -60,8 +60,8 @@ def predict_violence(video_path, model = tcn_model , threshold=0.5):
     non_violence_count = 0
     frame_number = 0
     
-    temp_path = r'uploads\\temp_output.mp4'
-    output_path = r'static\\videos\\output.mp4'
+    temp_path = r'uploads\temp_output.mp4'
+    output_path = r'static\videos\output.mp4'
     output_name = r'output.mp4'
 
     # Define the codec and create VideoWriter object

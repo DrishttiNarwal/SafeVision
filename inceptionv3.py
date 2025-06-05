@@ -11,7 +11,6 @@ inception_model = tf.keras.models.load_model(r'model\inceptionV3-model.h5')
 # Model input image size
 image_size = (224, 224)
 
-
 def reencode_video(input_path, output_path):
     clip = VideoFileClip(input_path)
     clip.write_videofile(output_path, codec="libx264")
